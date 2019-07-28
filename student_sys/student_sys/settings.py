@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'student.middleware.TimeItMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -80,7 +81,10 @@ DATABASES = {
         'NAME': 'student_sys',
         'HOST': '127.0.0.1',
         'USER': 'lmz',  # 只有本地访问权限
-        "PASSWORD": 'lmz1995'
+        "PASSWORD": 'lmz1995',
+        'TEST': {
+            "name": "student_sys_test",
+        }
     }
 }
 

@@ -30,3 +30,7 @@ class Student(models.Model):
     @classmethod
     def get_all(cls):
         return cls.objects.all()
+
+    @property
+    def sex_show(self):
+        return dict(self.SEX_ITEMS)[self.sex]
